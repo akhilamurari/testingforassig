@@ -13,11 +13,7 @@ services:
   web:
     build: .
     environment:
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_USER: app
-      DB_PASS: app
-      DB_NAME: appdb
+      DATABASE_URL: postgresql://app:app@db:5432/appdb?schema=public
     ports:
       - '3000:3000'
     depends_on:
