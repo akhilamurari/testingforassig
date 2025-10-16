@@ -2,12 +2,16 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
 generator client {
   provider = "prisma-client-js"
 }
-model Post {
-  id        Int      @id @default(autoincrement())
-  title     String
-  content   String?
-  createdAt DateTime @default(now())
+
+model CommandLogs {
+  id Int @id @default(autoincrement())
+  provider String?
+  command String
+  note String?
+  createdAt DateTime?
+  updatedAt DateTime?
 }
