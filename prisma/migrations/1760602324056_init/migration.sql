@@ -1,0 +1,2 @@
+-- Placeholder migration generated
+-- Apply with: prisma migrate dev --name init
