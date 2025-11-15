@@ -1,0 +1,1 @@
+Generated Prisma schema with provider postgresql.
